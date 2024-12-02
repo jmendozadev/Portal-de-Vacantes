@@ -7,6 +7,18 @@
 <!-- Estilos personalizados -->
 @push('styles')
     <style>
+        html {
+            background-color: #fff;
+            box-sizing: border-box; /* Hack para Box Model */
+        }
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-size: 16px; /* 1 rem = 10px */
+            font-family: 'Krub', sans-serif;
+        }
         .search-bar input, .search-bar select, .search-bar button {
             border-radius: 50px;
             padding: 10px 20px;
@@ -15,14 +27,14 @@
             text-decoration: none;
         }
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.694), rgba(0, 0, 0, 0.671)), url('/images/bg-home.png') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.694), rgba(0, 0, 0, 0.671)), url('../images/bg-home.png') no-repeat center center;
             background-size: cover;
             color: white;
-            padding: 120px 0;
+            padding: 225px 0px;
             text-align: center;
         }
         .footer {
-            background: #f8f9fa;
+            background: #fff;
             padding: 30px 0;
             text-align: center;
         }
@@ -32,6 +44,36 @@
         .social-icons a {
             /* separa los iconos con margin */
             margin: 0 10px;
+        }
+
+        /* Media Queries: Para mackbook 14 pulgadas */
+        @media (max-width: 1512px) {
+            .search-bar input, .search-bar select, .search-bar button {
+            border-radius: 50px;
+            padding: 10px 20px;
+            }
+            .links a {
+                text-decoration: none;
+            }
+            .hero-section {
+                background: linear-gradient(rgba(0, 0, 0, 0.694), rgba(0, 0, 0, 0.671)), url('../images/bg-home.png') no-repeat center center;
+                background-size: cover;
+                color: white;
+                padding: 120px 0;
+                text-align: center;
+            }
+            .footer {
+                background: #fff;
+                padding: 30px 0;
+                text-align: center;
+            }
+            .logo-coatza {
+                margin-bottom: 40px;
+            }
+            .social-icons a {
+                /* separa los iconos con margin */
+                margin: 0 10px;
+            }
         }
     </style>
 @endpush
@@ -51,23 +93,23 @@
 @endsection
 
     <!-- Hero Section -->
-@section('content')
-    <section class="hero-section">
-        <div class="container">
-            <h1>Bolsa De Trabajo Emplé@te</h1>
-            <p>H. Ayuntamiento de Coatzacoalcos, Ver.</p>
-            <div class="search-bar d-flex justify-content-center mt-4">
-                <select class="form-select me-2" style="max-width: 300px;">
-                    <option selected>Seleccionar Categoría</option>
-                </select>
-                <select class="form-select me-2" style="max-width: 300px;">
-                    <option selected>Seleccionar Municipio</option>
-                </select>
-                <button class="btn btn-warning">Buscar</button>
+    @section('content')
+        <section class="hero-section">
+            <div class="container">
+                <h1>Bolsa De Trabajo Emplé@te</h1>
+                <p>H. Ayuntamiento de Coatzacoalcos, Ver.</p>
+                <div class="search-bar d-flex justify-content-center mt-4">
+                    <select class="form-select me-2" style="max-width: 300px;">
+                        <option selected>Seleccionar Categoría</option>
+                    </select>
+                    <select class="form-select me-2" style="max-width: 300px;">
+                        <option selected>Seleccionar Municipio</option>
+                    </select>
+                    <button class="btn btn-warning">Buscar</button>
+                </div>
             </div>
-        </div>
-    </section>
-@endsection
+        </section>
+    @endsection
 
     <!-- Footer -->
 @section('footer')
