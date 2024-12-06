@@ -1,0 +1,111 @@
+html {
+    background-color: #fff;
+    box-sizing: border-box; /* Hack para Box Model */
+}
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1 rem = 16px */
+    font-family: 'Krub', sans-serif;
+}
+/* Elementos Generales */
+.search-bar input, 
+.search-bar select, 
+.search-bar button {
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.header {
+    flex-direction: row; /* Diseño horizontal */
+    margin: 0 auto; /* Centra el contenido */
+    color: white; /* Texto blanco */
+}
+.links {
+    display: flex; /* Muestra los enlaces en una fila horizontal */
+    gap: 15px; /* Espaciado entre enlaces */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra los enlaces verticalmente */
+}
+.links a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color blanco para los enlaces */
+    font-size: 1rem; /* Tamaño del texto */
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bg-home.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 9rem 0; /* Ajusta el hero dependiendo que tanto se quiere abarcar en la pantalla */
+    text-align: center;
+}
+.hero-caption h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.hero-caption p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+/* Footer */
+.footer {
+    background: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+.social-icons a {
+    margin: 0 12px; /* Espaciado entre iconos */
+}
+
+/* Media Queries */
+
+/* Dispositivos pequeños: Tablets y móviles */
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 150px 0; /* Reduce el espacio vertical */
+    }
+    .hero-caption h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+    .hero-caption p {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Dispositivos muy pequeños: Móviles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia a diseño vertical */
+        text-align: center; /* Centra todo el contenido */
+    }
+    .logo-header {
+        margin-bottom: 20px; /* Más espacio entre logo y enlaces */
+    }
+    .links {
+        flex-direction: column; /* Cambia los enlaces a columna */
+        gap: 10px; /* Espaciado más pequeño entre enlaces */
+    }
+    .links a {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+    .hero-section {
+        padding: 100px 0; /* Reduce aún más el espacio vertical */
+    }
+    .hero-caption h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+    .hero-caption p {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+    .search-bar input, 
+    .search-bar select, 
+    .search-bar button {
+        padding: 8px 16px; /* Reduce el padding para móviles */
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+    .links a {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en enlaces */
+    }
+}
